@@ -41,3 +41,34 @@ Docker Compose manages the lifecycle of these services.
 ## Security Note
 
 This document intentionally omits real credentials, private keys, and detailed access information. Network details should be reviewed before public release.
+
+
+## Architecture Diagram
+
+```mermaid
+flowchart TD
+    CLIENT["Remote client"]
+    TS["Tailscale network"]
+    VPN["vpn-gw VM<br/>Subnet router"]
+    LAN["Private LAN<br/>192.168.1.0/24"]
+    PVE["Proxmox VE host"]
+    WAZUH["Wazuh VM"]
+    DOCKER["Docker Compose"]
+    MANAGER["Wazuh Manager"]
+    INDEXER["Wazuh Indexer"]
+    DASH["Wazuh Dashboard"]
+    APP["Additional Linux VM"]
+
+    CLIENT --> TS
+    TS --> VPN
+    VPN --> LAN
+    LAN --> PVE
+    PVE --> WAZUH
+    PVE --> APP
+    WAZUH --> DOCKER
+    DOCKER --> MANAGER
+    DOCKER --> INDEXER
+    DOCKER --> DASH
+```
+
+> This is a logical overview. Network paths and VM placement should be verified against the current lab configuration.
