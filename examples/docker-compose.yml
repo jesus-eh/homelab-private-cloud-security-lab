@@ -1,0 +1,15 @@
+# Example only — generic service deployment
+# This is a learning template, not the actual Wazuh deployment.
+
+services:
+  web:
+    image: nginx:alpine
+    container_name: homelab-example-web
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8080:80"
+    healthcheck:
+      test: ["CMD", "nginx", "-t"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
