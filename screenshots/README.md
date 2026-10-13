@@ -19,6 +19,8 @@ Shows the status of the Wazuh services managed through Docker Compose, including
 - Service status verification
 - Infrastructure troubleshooting
 
+![Docker Compose container status](docker-compose-status.png)
+
 ### 2. Wazuh Dashboard
 
 **File:** `wazuh-dashboard.png`
@@ -30,6 +32,8 @@ Shows the Wazuh web interface used for centralized security monitoring and event
 - SIEM/XDR platform administration
 - Security event visibility
 
+![Docker Compose container status](wazuh-dashboard.png)
+
 ### 3. Proxmox VE — Virtualization Overview
 
 **File:** `proxmox-overview.png`
@@ -40,6 +44,8 @@ Shows the virtualized lab environment managed through Proxmox VE.
 - Virtual machine management
 - Infrastructure virtualization
 - Resource and service organization
+
+![Docker Compose container status](proxmox-overview.png)
 
 ## Security and Privacy
 
