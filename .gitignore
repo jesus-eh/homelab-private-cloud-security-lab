@@ -1,0 +1,37 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.secret
+secrets/
+credentials/
+
+# Private keys and certificates
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+
+# Backups and local data
+*.bak
+*.backup
+*.dump
+*.sql
+*.sqlite
+*.db
+backups/
+data/
+logs/
+
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Terraform state, if used in the future
+*.tfstate
+*.tfstate.*
+.terraform/
